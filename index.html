@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenId Connect Sample</title>
+  </head>
+  <body>
+    <h1>OpenId Connect Sample</h1>
+<p>
+  This sample demonstrates the OpenId Connect <b>Implicit</b> flow.
+</p>
+<p>
+  This flow is useful for single page applications
+  as it does not require any server side interaction with
+  the OpenId Connect provider.
+
+  After clicking login the user will be redirect to Google to
+  authenticate. Once authenticated they will be redirected back to
+  this site and their profile details will be displayed below
+</p>
+<p>
+  <a href="" id="login">LOGIN</a>
+</p>
+<p>
+  <a href="" id="clear">Clear URL</a>
+</p>
+<div id="loginResult"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.5.1/oidc-client.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>
