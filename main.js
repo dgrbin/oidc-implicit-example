@@ -5,10 +5,14 @@ Oidc.Log.logger = console;
 Oidc.Log.level = Oidc.Log.INFO;
 
 
+function currentURLWithoutHash() {
+  return window.location.href.split('#')[0];
+}
+
 var mgr = new Oidc.UserManager({
     authority: 'https://accounts.google.com/',
     client_id: '295915365156-q9ejiq0cdeubab3v4fg4r188bltf0mti.apps.googleusercontent.com',
-    redirect_uri: window.origin,
+    redirect_uri: currentURLWithoutHash(),
     response_type: 'id_token token',
     scope: 'openid profile email',
 
@@ -31,7 +35,7 @@ function redirectToLogin(e) {
 
 function clearUrl(e) {
   e.preventDefault();
-  window.location = window.location.href.split('#')[0];
+  window.location = currentURLWithoutHash();
 }
 
 //
